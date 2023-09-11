@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nullam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>Nullam</h1>
+<h2>
+    <ul>
+        <a th:href="@{/}">Avaleht</a>
+    </ul>
+</h2>
+<h4>Ürituse lisamine</h4>
+<h3>Ürituse lisamine</h3>
+<form th:action="@{'/event/create'}" method="post">
+    Ürituse nimi: <label><input type="text" name="name"/></label><br><br>
+    Toimumisaeg: <label><input type="datetime-local" name="time"/></label><br><br>
+    Koht: <label><input type="text" name="place"/></label><br><br>
+    Lisainfo: <label><input type="text" name="info"/></label><br><br>
+    <input type="button" onclick="window.history.back()" value="Tagasi">
+    <input type="submit" value="Lisa"/>
+</form>
+</body>
+</html>

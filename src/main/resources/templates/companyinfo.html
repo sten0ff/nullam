@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nullam</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>Nullam</h1>
+<h3>Osavõtja info</h3>
+<form th:action="@{'/event/change-company/' + ${event.id} + '/' + ${company.id}}"  method="post">
+  Juriidiline nimi: <label><input type="text" th:value="${company.name}" name="name"/></label><br><br>
+  Registrikood: <label><input type="text" th:value="${company.regnumber}" name="regnumber"/></label><br><br>
+  Osavõtjate arv: <label><input type="text" th:value="${company.ammount}"name="ammount"/></label><br><br>
+  Makseviis: <label><input type="text" th:value="${company.payment}" name="payment"/></label><br><br>
+  Lisainfo: <label><input type="text" th:value="${company.info}"name="info"/></label><br><br>
+  <input type="button" onclick="window.history.back()" value="Tagasi">
+  <input type="submit" value="Salvesta"/>
+</form>
+</body>
+</html>
